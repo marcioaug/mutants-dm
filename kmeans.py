@@ -16,10 +16,10 @@ class KMeans:
         assignments = None
 
         while True:
-            new_assignments = map(self.classify, inputs)
+            new_assignments = [self.classify(i) for i in inputs]
 
             if assignments == new_assignments:
-                return
+                return assignments
 
             assignments = new_assignments
 

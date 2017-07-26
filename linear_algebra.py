@@ -11,7 +11,9 @@ def vector_subtract(v, w):
 
 
 def vector_sum(vectors):
-    return reduce(vector_add, vectors)
+    if len(vectors) > 0:
+        return reduce(vector_add, vectors)
+    return []
 
 
 def scalar_multiply(c, v):
